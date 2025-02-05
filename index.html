@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="stylesheet" href="styles.css"> <!-- Consider linking an external CSS file for better organization -->
+</head>
+<body>
+    <header>
+        <h1>
+            Private Git Agent 
+            <span class="icon material-symbols-outlined"></span>
+        </h1>
+        <h2>
+            Ask me to review code, suggest improvements, write test cases, or anything else you need help with.
+            <span class="icon material-symbols-outlined"></span>
+        </h2>
+    </header>
+    
+    <main>
+        <form id="cloneForm">
+            <label for="repoLink">GitHub Repository Link:</label>
+            <input id="repoLink" type="text" required>
+            
+            <label for="branchName">Branch Name:</label>
+            <input id="branchName" type="text" placeholder="main">
+            
+            <label for="targetDir">Target Directory:</label>
+            <input id="targetDir" type="text" placeholder="./cloned-repo">
+            
+            <button type="submit">Start</button>
+        </form>
+    
+        <p id="result"></p> <!-- Ensure this exists for displaying messages -->
+    
+        <textarea id="user-input" class="input" rows="10" cols="50" placeholder="How can I help?"></textarea>
+    
+        <div class="button-container">
+            <button id="sendButton">
+                <span class="icon material-symbols-outlined">send</span>
+            </button>
+        </div>
+    
+        <div id="chatbot-conversation-container"></div> <!-- Ensure chatbot UI exists -->
+    
+        <p class="reply"></p>
+    </main>
+    
+    
+    
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
